@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 
 default_augs = {
     'owner': 'SamFeighery',
-    'start_date': datetime(2024, 5, 23),
+    'start_date': datetime(2024, 5, 22),
     'catchup': False
 }
 
