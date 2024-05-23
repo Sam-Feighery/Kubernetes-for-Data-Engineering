@@ -6,7 +6,7 @@ dags:
   gitSync:
     enabled: true
     repo: https://github.com/Sam-Feighery/Kubernetes-for-Data-Engineering.git
-    branch: main
+    branch: master
     rev: HEAD
     depth: 1
     maxFailures: 0
