@@ -2,15 +2,15 @@ from airflow import DAG
 from airflow.operators.bash import BashOperator
 from datetime import datetime, timedelta
 
-default_augs = {
-    'owner': 'SamFeighery',
+default_args = {
+    'owner': 'Sam Feighery',
     'start_date': datetime(2024, 5, 22),
     'catchup': False
 }
 
 dag = DAG(
     'hello_world',
-    default_args= default_augs,
+    default_args= default_args,
     schedule=timedelta(days=1)
 )
 
