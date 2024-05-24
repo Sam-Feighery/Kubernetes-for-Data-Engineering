@@ -50,20 +50,20 @@ default_args = {
 
 dag = DAG(
     'fetch_and_preview',
-    default_args= default_args,
+    default_args = default_args,
     schedule=timedelta(days=1)
 )
 
 get_data_from_url = PythonOperator(
     task_id = 'get_data',
     python_callable=get_data,
-    dag=DAG
+    dag=dag
 )
 
 preview_data_from_url = PythonOperator(
     task_id = 'preview_data',
     python_callable=preview_data,
-    dag=DAG
+    dag=dag
 )
 
 get_data_from_url >> preview_data_from_url
