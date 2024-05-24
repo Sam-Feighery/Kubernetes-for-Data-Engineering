@@ -49,7 +49,7 @@ default_args = {
 }
 
 dag = DAG(
-    dag_id = 'fetch_and_preview',
+    'fetch_and_preview',
     default_args= default_args,
     schedule=timedelta(days=1)
 )
