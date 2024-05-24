@@ -8,7 +8,7 @@ def get_data(**kwargs):
     url = 'https://raw.githubusercontent.com/airscholar/ApacheFlink-SalesAnalytics/main/output/new-output.csv'
     response = requests.get(url)
 
-    if response.status_codes == 200:
+    if response.status_code == 200:
         df = pd.read_csv(url, header=None, names=['Category', 'Price', 'Quantity'])
 
         #convert dataframe to json string from xcom
